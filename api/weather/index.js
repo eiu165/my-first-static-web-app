@@ -8,9 +8,13 @@ module.exports = function (context, req) {
         };
     }
     else {
+        // context.res = {
+        //     status: 400,
+        //     body: "Please pass a name on the query string or in the request body"
+        // };
         context.res = {
-            status: 400,
-            body: "Please pass a name on the query string or in the request body"
+            // status: 200, /* Defaults to 200 */
+            body: "name not provided "  
         };
     }
     context.done();
